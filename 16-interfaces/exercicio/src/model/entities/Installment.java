@@ -11,8 +11,8 @@ public class Installment {
         this.amount = amount;
     }
 
-    public LocalDate getDueDate() {
-        return dueDate;
+    public String getDueDate() {
+        return String.valueOf(dueDate) ;
     }
 
     public void setDueDate(LocalDate dueDate) {
@@ -25,5 +25,12 @@ public class Installment {
 
     public void setAmount(Double amount) {
         this.amount = amount;
+    }
+
+    @Override
+    public String toString() {
+        return dueDate
+                + " - "
+                + String.format("%.2f", amount);
     }
 }
